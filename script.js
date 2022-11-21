@@ -13,18 +13,20 @@ document.querySelector(".check").addEventListener("click", function () {
     document.querySelector(".message").textContent = "🎊 Correct Number";
     document.querySelector(".number").textContent = secretNumber;
 
-    document.querySelector(".score").textContent = Math.max(
-      highScore,
-      document.querySelector(".score").textContent
-    ); // manupulating the css to change bg color
+    // manupulating the css to change bg color
     document.querySelector("body").style.backgroundColor = "#60b347";
     document.querySelector(".number").style.width = "30rem";
+
+    document.querySelector(".highscore").textContent = Math.max(
+      score,
+      document.querySelector(".highscore").textContent
+    );
   } else if (guess > secretNumber) {
     document.querySelector(".message").textContent = "Too high";
   } else {
     document.querySelector(".message").textContent = "Too low";
   }
-  if (score > 1) {
+  if (score > 1 && guess !== secretNumber) {
     document.querySelector(".score").textContent = --score;
   } else {
     document.querySelector(".score").textContent = --score;
