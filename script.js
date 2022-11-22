@@ -21,16 +21,13 @@ document.querySelector(".check").addEventListener("click", function () {
       score,
       document.querySelector(".highscore").textContent
     );
-  } else if (guess > secretNumber) {
-    document.querySelector(".message").textContent = "Too high";
-  } else {
-    document.querySelector(".message").textContent = "Too low";
-  }
-  if (score > 1 && guess !== secretNumber) {
+  } else if (score > 1) {
+    document.querySelector(".message").textContent =
+      guess > secretNumber ? "Too high" : "Too low";
     document.querySelector(".score").textContent = --score;
   } else {
-    document.querySelector(".score").textContent = --score;
     document.querySelector(".message").textContent = "Lost the Game";
+    document.querySelector(".score").textContent = 0;
   }
 });
 
