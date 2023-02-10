@@ -2,8 +2,6 @@
 
 # [Live](https://guess-the-correct-number-game.netlify.app/)
 
-#
-
 # Output : 
 
 ![](./guess-the-number.jpg)
