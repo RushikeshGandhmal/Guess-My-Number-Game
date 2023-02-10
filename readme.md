@@ -4,6 +4,6 @@
 
 #
 
-#Output : 
+# Output : 
 
 ![](./guess-the-number.jpg)
