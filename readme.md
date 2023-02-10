@@ -4,4 +4,4 @@
 
 #
 
-#[](./guess-the-number.jpg)
+![](./guess-the-number.jpg)
