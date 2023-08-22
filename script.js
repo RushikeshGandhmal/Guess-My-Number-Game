@@ -10,14 +10,17 @@ const displayMessage = () => {
   document.querySelector(".message").textContent = message;
 };
 
+const setScore = (score1) => {
+  setScore(score1);
+};
+
 const check = (score1, message) => {
   if (score1 > 1) {
-    console.log("score", score);
     displayMessage(message);
-    document.querySelector(".score").textContent = --score;
+    setScore(--score);
   } else {
     document.querySelector(".message").textContent = "💥 You lost the game!";
-    document.querySelector(".score").textContent = 0;
+    setScore(0);
   }
 };
 
@@ -45,10 +48,10 @@ inputElement.addEventListener("click", () => {
 
 againButton.addEventListener("click", () => {
   score = 20;
+  setScore(20);
   secretNumber = Math.trunc(Math.random() * 20 + 1);
   displayMessage("Start guessing...");
   document.querySelector(".guess").value = "";
-  document.querySelector(".score").textContent = 20;
   document.querySelector(".number").textContent = "?";
   document.querySelector("body").style.backgroundColor = "#222";
   document.querySelector(".number").style.width = "15rem";
